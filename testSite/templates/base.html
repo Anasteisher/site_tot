@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" xmlns:display="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+
+
+<div style="font-size: 24px; color: #575D5D; font-family: Montserrat; font-weight: 400; padding: 50px; ">
+  <div id="link">
+    <ul>
+    {% for key, value in menu.items %}
+    <a href="{{ value }}">{{ key }}</a>
+
+    {% endfor %}
+
+</ul>
+      </div>
+</div>
+
+<div class="content item">
+        <div style="left: 1140px; top: 69px; position: absolute; color: #F76E20; font-size: 40px; font-family: Klukva; font-weight: 500; line-height: 40.20px; word-wrap: break-word">DoggySense</div>
+        <img style="width: 91px; height: 68px; left: 674px; top: 1070px; position: absolute" src="{% static '/image/arrow.png' %}">
+    {% block content %}
+    {% endblock %}
+</div>
+</div>
+</body>
+</html>
